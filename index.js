@@ -194,18 +194,18 @@ console.log(friends.length);
 friends[2]= 'Eli'; // will replace Doe in the Array
 */
 
-register(type, fn) {
-    if (utils.isObject(type)) {
-      for (let key of Object.keys(type)) this.register(key, type[key]);
-      return this;
-    }
-    assert.equal(typeof fn, 'function', 'expected a function');
-    let name = type.toLowerCase();
-    if (fn.prototype instanceof this.Prompt) {
-      this.prompts[name] = fn;
-    } else {
-      this.prompts[name] = fn(this.Prompt, this);
-    }
-    return this;
-  }
+// register(type, fn) {
+//     if (utils.isObject(type)) {
+//       for (let key of Object.keys(type)) this.register(key, type[key]);
+//       return this;
+//     }
+//     assert.equal(typeof fn, 'function', 'expected a function');
+//     let name = type.toLowerCase();
+//     if (fn.prototype instanceof this.Prompt) {
+//       this.prompts[name] = fn;
+//     } else {
+//       this.prompts[name] = fn(this.Prompt, this);
+//     }
+//     return this;
+//   }
 
